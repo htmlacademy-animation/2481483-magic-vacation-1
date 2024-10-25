@@ -13,9 +13,12 @@ $wider: "min-aspect-ratio: 1441/760";
 $narrower: "max-aspect-ratio: 1439/760";
 
 $tablet: 1024px;
+$tablet-minus-1: 1023px;
 $mobile: 768px;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 $index: 1.38871;
+
+$ease-custom-bezier: cubic-bezier(.5,.8,.5,.8);

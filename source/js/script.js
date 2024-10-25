@@ -9,8 +9,10 @@ import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 import intro from "./modules/intro.js";
+import timeout from "./modules/timeout.js";
 
 // init modules
+timeout();
 mobileHeight();
 slider();
 menu();

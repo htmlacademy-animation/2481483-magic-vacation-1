@@ -6,6 +6,11 @@
       opacity: 1;
       pointer-events: auto;
     }
+
+    .social-block__link {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
@@ -89,6 +94,7 @@
   margin-top: 1.5rem;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.2s;
 
   @media (min-width: $stop-scaling) {
     margin-top: 15px;
@@ -146,6 +152,17 @@
     flex: none;
     margin-bottom: 0.5rem;
 
+    &:nth-of-type(2) {
+      .social-block__link {
+        transition-delay: 0.1s;
+      }
+    }
+    &:nth-of-type(3) {
+      .social-block__link {
+        transition-delay: 0.2s;
+      }
+    }
+
     @media (min-width: $stop-scaling) {
       margin-bottom: 5px;
     }
@@ -168,6 +185,9 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: translateY(15px);
 
   @media (min-width: $stop-scaling) {
     width: 40px;

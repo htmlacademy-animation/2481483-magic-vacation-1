@@ -8,11 +8,13 @@ import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
+import intro from "./modules/intro.js";
 
 // init modules
 mobileHeight();
 slider();
 menu();
+intro();
 footer();
 chat();
 result();

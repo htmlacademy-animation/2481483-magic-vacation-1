@@ -1,5 +1,5 @@
 export default () => {
     document.body.onload = () => {
-        document.body.className = "timeout"
+        document.body.className = "pageLoaded"
     };
 };

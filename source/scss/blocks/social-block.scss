@@ -14,6 +14,12 @@
   }
 }
 
+.pageLoaded {
+  .social-block__toggler::before {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+
 .social-block__toggler {
   @include btn-reset;
   position: relative;
@@ -40,6 +46,9 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transform: translate(-50%, -50%) scale(0, 0);
+    transition: transform $flash-custom-bezier $time-animation-s;
+    transition-delay: $time-animation-s;
   }
 
   svg {
@@ -154,7 +163,7 @@
 
     &:nth-of-type(2) {
       .social-block__link {
-        transition-delay: 0.1s;
+        transition-delay: $time-animation-xs;
       }
     }
     &:nth-of-type(3) {
@@ -186,7 +195,7 @@
   border: 2px solid transparent;
   border-radius: 50%;
   opacity: 0;
-  transition: all 0.3s;
+  transition: all $time-animation-s;
   transform: translateY(15px);
 
   @media (min-width: $stop-scaling) {

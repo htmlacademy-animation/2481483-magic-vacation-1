@@ -22,3 +22,10 @@ $retina-dppx: 1.5dppx;
 $index: 1.38871;
 
 $ease-custom-bezier: cubic-bezier(.5,.8,.5,.8);
+$flash-custom-bezier: cubic-bezier(0, .90, .75, 1.5);
+
+$time-animation-xs: .1s;
+$time-animation-s: .3s;
+$time-animation-m: .5s;
+$time-animation-l: 1s;
+$time-animation-xl: 1.5s;

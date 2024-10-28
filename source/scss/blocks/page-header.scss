@@ -37,8 +37,8 @@
   color: $c-light;
   opacity: 0;
   transform: translateX(-25%);
-  transition: opacity, transform $ease-custom-bezier 0.3s;
-  transition-delay: .1s;
+  transition: opacity $ease-custom-bezier $time-animation-s, transform $ease-custom-bezier $time-animation-s;
+  transition-delay: $time-animation-xs;
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -136,7 +136,7 @@
   align-items: center;
   opacity: 0;
   transition: opacity $ease-custom-bezier 0.6s;
-  transition-delay: .1s;
+  transition-delay: $time-animation-xs;
 
 
   @media (max-width: $tablet) and (orientation: portrait) {
@@ -259,7 +259,8 @@
       background-color: $c-light;
       display: block;
       right: 0;
-      transition: all 0.4s linear;
+      transition: width $time-animation-m linear, background-color $time-animation-m linear;
+     
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
@@ -274,7 +275,6 @@
       }
     }
 
-    &.active,
     &:hover,
     &:focus {
       &::after {
@@ -314,7 +314,7 @@
   }
 }
 
-.timeout {
+.pageLoaded {
   .page-header {
     &__nav {
       opacity: 1;

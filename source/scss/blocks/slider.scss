@@ -99,8 +99,8 @@
   line-height: 2rem;
   will-change: transform, opacity;
   transform: translateX(40px);
-  transition: opacity 0.4s ease-in, transform 0.4s ease-in;
-  transition-delay: .4s;
+  transition: opacity $time-animation-m ease-in, transform $time-animation-m ease-in;
+  transition-delay: $time-animation-m;
   opacity: 0;
 
   @media (min-width: $stop-scaling) {

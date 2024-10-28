@@ -47,8 +47,8 @@
   background-color: $c-light;
   z-index: 1;
   transform: translateY(100%);
-  transition: transform $ease-custom-bezier 0.4s;
-  transition-delay: .1s;
+  transition: transform $ease-custom-bezier $time-animation-m;
+  transition-delay: $time-animation-xs;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
@@ -73,7 +73,7 @@
   }
 }
 
-.timeout {
+.pageLoaded {
   .screen__footer {
     transform: none;
   }

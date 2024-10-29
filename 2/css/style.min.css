@@ -1995,7 +1995,7 @@ img {
   color: #ffffff;
   opacity: 0;
   transform: translateX(-25%);
-  transition: opacity, transform cubic-bezier(0.5, 0.8, 0.5, 0.8) 0.3s;
+  transition: opacity cubic-bezier(0.5, 0.8, 0.5, 0.8) 0.3s, transform cubic-bezier(0.5, 0.8, 0.5, 0.8) 0.3s;
   transition-delay: 0.1s;
 }
 .page-header__logo:hover {
@@ -2230,7 +2230,7 @@ img {
   background-color: #ffffff;
   display: block;
   right: 0;
-  transition: all 0.4s linear;
+  transition: width 0.5s linear, background-color 0.5s linear;
 }
 @media (max-width: 1024px) and (orientation: portrait) {
   .page-header__menu a::after {
@@ -2246,7 +2246,7 @@ img {
     background-color: #5f458c;
   }
 }
-.page-header__menu a.active::after, .page-header__menu a:hover::after, .page-header__menu a:focus::after {
+.page-header__menu a:hover::after, .page-header__menu a:focus::after {
   width: 100%;
   left: 0;
 }
@@ -2280,14 +2280,14 @@ img {
   }
 }
 
-.timeout .page-header__nav {
+.pageLoaded .page-header__nav {
   opacity: 1;
 }
-.timeout .page-header__logo {
+.pageLoaded .page-header__logo {
   opacity: 1;
   transform: none;
 }
-.timeout .page-header__menu a.active::after {
+.pageLoaded .page-header__menu a.active::after {
   width: 100%;
   left: 0;
   visibility: visible;
@@ -3258,7 +3258,7 @@ img {
   background-color: #ffffff;
   z-index: 1;
   transform: translateY(100%);
-  transition: transform cubic-bezier(0.5, 0.8, 0.5, 0.8) 0.4s;
+  transition: transform cubic-bezier(0.5, 0.8, 0.5, 0.8) 0.5s;
   transition-delay: 0.1s;
 }
 @media (max-width: 1024px) and (orientation: portrait) {
@@ -3284,7 +3284,7 @@ img {
   }
 }
 
-.timeout .screen__footer {
+.pageLoaded .screen__footer {
   transform: none;
 }
 
@@ -3718,8 +3718,8 @@ img {
   line-height: 2rem;
   will-change: transform, opacity;
   transform: translateX(40px);
-  transition: opacity 0.4s ease-in, transform 0.4s ease-in;
-  transition-delay: 0.4s;
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  transition-delay: 0.5s;
   opacity: 0;
 }
 @media (min-width: 2000px) {
@@ -3933,6 +3933,10 @@ img {
   transform: translateY(0);
 }
 
+.pageLoaded .social-block__toggler::before {
+  transform: translate(-50%, -50%) scale(1, 1);
+}
+
 .social-block__toggler {
   padding: 0;
   margin: 0;
@@ -3972,6 +3976,9 @@ img {
   background-color: #ffffff;
   border: 2px solid #ffffff;
   z-index: -1;
+  transform: translate(-50%, -50%) scale(0, 0);
+  transition: transform cubic-bezier(0, 0.9, 0.75, 1.5) 0.3s;
+  transition-delay: 0.3s;
 }
 .social-block__toggler svg {
   position: absolute;

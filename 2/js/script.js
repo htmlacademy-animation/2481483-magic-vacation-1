@@ -10599,6 +10599,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./source/js/modules/pageLoaded.js":
+/*!*****************************************!*\
+  !*** ./source/js/modules/pageLoaded.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+    document.body.onload = () => {
+        document.body.className = "pageLoaded"
+    };
+});
+
+/***/ }),
+
 /***/ "./source/js/modules/result.js":
 /*!*************************************!*\
   !*** ./source/js/modules/result.js ***!
@@ -10766,23 +10783,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./source/js/modules/timeout.js":
-/*!**************************************!*\
-  !*** ./source/js/modules/timeout.js ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-    document.body.onload = () => {
-        document.body.className = "timeout"
-    };
-});
-
-/***/ }),
-
 /***/ "./source/js/script.js":
 /*!*****************************!*\
   !*** ./source/js/script.js ***!
@@ -10802,7 +10802,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_social_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/social.js */ "./source/js/modules/social.js");
 /* harmony import */ var _modules_full_page_scroll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/full-page-scroll */ "./source/js/modules/full-page-scroll.js");
 /* harmony import */ var _modules_intro_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/intro.js */ "./source/js/modules/intro.js");
-/* harmony import */ var _modules_timeout_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/timeout.js */ "./source/js/modules/timeout.js");
+/* harmony import */ var _modules_pageLoaded_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/pageLoaded.js */ "./source/js/modules/pageLoaded.js");
 // modules
 
 
@@ -10817,7 +10817,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // init modules
-Object(_modules_timeout_js__WEBPACK_IMPORTED_MODULE_10__["default"])();
+Object(_modules_pageLoaded_js__WEBPACK_IMPORTED_MODULE_10__["default"])();
 Object(_modules_mobile_height_adjust_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
 Object(_modules_slider_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
 Object(_modules_menu_js__WEBPACK_IMPORTED_MODULE_2__["default"])();

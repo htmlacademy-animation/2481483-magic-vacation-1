@@ -9,21 +9,30 @@
     background-color: $c-dark;
     transform: translateY(100%);
     will-change: transform;
+    transition: transform 0.4s ease-in 0.3s;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+    // .screen--prizes.active ~ & {
+    //   animation: backgroundAppear .3s linear both;
+
+    //   @media (prefers-reduced-motion: reduce) {
+    //     animation: none;
+    //   }
+    // }
 
     .screen--prizes.active ~ & {
-      animation: backgroundAppear .3s linear both;
-
-      @media (prefers-reduced-motion: reduce) {
-        animation: none;
-      }
-    }
-  }
-
-  @keyframes backgroundAppear {
-    from {
-      transform: translateY(100%);
-    }
-    to {
       transform: translateY(0);
+      transition-delay: 0s;
     }
   }
+
+  // @keyframes backgroundAppear {
+  //   from {
+  //     transform: translateY(100%);
+  //   }
+  //   to {
+  //     transform: translateY(0);
+  //   }
+  // }
